@@ -6,14 +6,15 @@ export default async (context) => {
     return;
   }
 
-  workbox.addEventListener('installed', (event) => {
+  workbox.addEventListener("installed", (event) => {
     if (!event.isUpdate) {
-      console.debug('The PWA is on the latest version.');      
+      console.debug("The PWA is on the latest version.");
       return;
     }
 
-    alert('update the application');
-    console.debug('There is an update for the PWA, reloading...');
+    if (confirm(`New content is available!. Click OK to refresh`)) {
+      window.location.reload();
+    }
     window.location.reload();
   });
 };
