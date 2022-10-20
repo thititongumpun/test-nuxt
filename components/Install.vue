@@ -1,6 +1,5 @@
 <template>
-  <!-- <div id="app"> -->
-  <v-app>
+  <div>
     <v-banner v-if="deferredPrompt" color="info" dark class="text-left">
       Get our free app. It won't take up space on your phone and also works
       offline!
@@ -12,9 +11,10 @@
     <div class="pa-4 text-center">
       <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
       <h1>Customize Your Vue.js PWA Installation</h1>
+      <v-btn text @click="dismiss">Dismiss</v-btn>
+      <v-btn text @click="install">Install</v-btn>
     </div>
-  </v-app>
-  <!-- </div> -->
+  </div>
 </template>
 
 <script>
