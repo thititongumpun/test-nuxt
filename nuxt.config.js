@@ -43,6 +43,9 @@ export default {
     manifest: {
       lang: "en",
     },
+    workbox: {
+      cachingExtensions: '@/plugins/pwacache.js'
+    }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
